@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
@@ -8,6 +9,32 @@
    <top>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="%file">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#closeApplication" text="%close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="%edit">
+                  <items>
+                        <RadioMenuItem mnemonicParsing="false" onAction="#setCaspian" text="%caspian">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="styleGroup" />
+                           </toggleGroup>
+                        </RadioMenuItem>
+                        <RadioMenuItem mnemonicParsing="false" onAction="#setModena" selected="true" text="%modena" toggleGroup="$styleGroup" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <CheckMenuItem mnemonicParsing="false" onAction="#setAlwaysOnTop" text="%setAlwaysOnTop" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="%help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#showAbout" text="%about" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
              <fx:include fx:id="topMenuButtons" source="TopMenuButtons.fxml" />
          </children>
       </VBox>

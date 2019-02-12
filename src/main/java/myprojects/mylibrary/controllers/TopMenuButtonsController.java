@@ -6,7 +6,7 @@ import javafx.scene.control.ToggleGroup;
 public class TopMenuButtonsController {
 
 
-    public static final String LIBRARY_FXML = "/fxml/openLibrary.fxml";
+    public static final String LIBRARY_FXML = "/fxml/OpenLibrary.fxml";
     public static final String BOOKS_FXML = "/fxml/OpenBooks.fxml";
     public static final String STATS_FXML = "/fxml/OpenStats.fxml";
     public static final String ADD_BOOK_FXML = "/fxml/AddBook.fxml";
