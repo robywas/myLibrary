@@ -1,14 +1,15 @@
-package myprojects.mylibrary.dialogs;
+package myprojects.mylibrary.utils;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.TextArea;
 
 import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class DialogUtils {
 
-    static ResourceBundle bundle = ResourceBundle.getBundle("bundles.messages");
+    static ResourceBundle bundle = FxmlUtils.getResourceBundles();
 
     public static void dialogAboutApplication(){
         Alert informationAlert = new Alert(Alert.AlertType.INFORMATION);
@@ -24,6 +25,17 @@ public class DialogUtils {
         confirmationDialog.setTitle(bundle.getString("exit.title"));
         Optional<ButtonType> result = confirmationDialog.showAndWait();
         return result;
+    }
+
+    public static void errorDialog(String error){
+        Alert errorAlert = new Alert(Alert.AlertType.ERROR);
+        errorAlert.setTitle(bundle.getString("error.title"));
+        errorAlert.setHeaderText(bundle.getString("error.header"));
+        errorAlert.showAndWait();
+        TextArea textArea = new TextArea(error);
+        errorAlert.getDialogPane().setContent(textArea);
+
+
     }
 
 
