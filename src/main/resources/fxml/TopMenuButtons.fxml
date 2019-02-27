@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="myprojects.mylibrary.controllers.TopMenuButtonsController">
+
+<HBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="myprojects.mylibrary.controllers.TopMenuButtonsController">
    <children>
       <ToggleButton mnemonicParsing="false" onAction="#openLibrary" prefHeight="80.0" prefWidth="150.0" text="%library">
          <toggleGroup>
@@ -25,6 +30,15 @@
          <HBox.margin>
             <Insets />
          </HBox.margin>
+      </Button>
+      <Button graphicTextGap="8.0" mnemonicParsing="false" onAction="#addCategory" prefHeight="80.0" prefWidth="150.0" text="%add.category">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/category.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </Button>
    </children>
    <padding>

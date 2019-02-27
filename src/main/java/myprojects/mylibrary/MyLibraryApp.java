@@ -1,11 +1,10 @@
 package myprojects.mylibrary;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import myprojects.mylibrary.database.dbutlis.DbManager;
 import myprojects.mylibrary.utils.FxmlUtils;
 
 import java.util.ResourceBundle;
@@ -32,6 +31,8 @@ public class MyLibraryApp extends Application {
         primaryStage.setTitle(FxmlUtils.getResourceBundles().getString("title.application"));
         primaryStage.setScene(scene);
         primaryStage.show();
+
+        DbManager.initDatabase();
 
     }
 }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="libraryDB.mv.db" uuid="c56eefa2-4e5b-4708-bcad-dbbe4355c7ec">
+      <driver-ref>h2.unified</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:file:D:\#Dokumenty\#Maven\myLibrary\libraryDB.mv.db</jdbc-url>
+    </data-source>
+  </component>
+</project>
